@@ -25,8 +25,7 @@
     </div>
     <div v-if="showModal" class="modal-container">
       <div class="modal-content">
-        <h2>Modal Title</h2>
-        <p>This is the modal content.</p>
+        <h2>Modal</h2>
         <button @click="showModal = false">Close</button>
       </div>
     </div>
