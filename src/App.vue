@@ -1,5 +1,6 @@
 <template>
   <div class="main-container">
+    <input type="text" class="inputSearch" v-model="search" placeholder="Search...">
     <div class="table-container">
       <table class="bordered">
         <thead>
@@ -8,7 +9,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="data in tableData" :key="data.id">
+          <tr v-for="data in filteredData" :key="data.id">
             <td v-for="column in displayedColumns" :key="`${data.id}-${column.key}`" >{{ data[column.key] }}</td>
           </tr>
         </tbody>
@@ -21,6 +22,22 @@
         </div>
       </div>
     </div>
+   <div class="input-container-1">
+  <input
+    type="text"
+    v-model="formattedInputValue"
+    @input="handleInput"
+    placeholder="Enter number"
+  />
+</div>
+<div class="input-container-2">
+  <input type="checkbox" v-model="inputCheck" />
+  <input
+    type="text"
+    :class="{'inputCheckTrue': inputCheck, 'inputCheckFalse': !inputCheck}"
+    placeholder="Enter number"
+  />
+</div>
     <div v-if="modalOpen" class="modal-container" @click.self="closeModal">
       <div class="modal-content">
         <table class="bordered" style="width: 100%;">
@@ -60,6 +77,9 @@ export default {
   data() {
     return {
       modalOpen: false,
+      inputCheck: false,
+      search: '',
+      formattedInputValue : '',
       header: [
         { name: 'Name', key: 'name', check: true, size: 20 },
         { name: 'Age', key: 'age', check: true, size: 10 },
@@ -85,11 +105,28 @@ export default {
   computed: {
     displayedColumns() {
       return this.header.filter(item => item.check);
-    }
+    },
+    filteredData() {
+      const search = this.search.toLowerCase();
+      return this.tableData.filter(item => {
+        return Object.values(item).some(value =>
+          String(value).toLowerCase().includes(search)
+        );
+      });
+    }    
   },
   methods: {
     closeModal() {
       this.modalOpen = false;
+    },
+    handleInput(e) {
+      this.formattedInputValue = this.numberFormatThree(e.target.value);
+    },
+    numberFormatThree(value) {
+      if (!value) return '';
+      let formattedValue = value.replace(/\s/g, "");
+      formattedValue = formattedValue.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+      return formattedValue;
     },
     openModal() {
       this.modalOpen = true;
@@ -118,7 +155,8 @@ export default {
   width: fit-content;
 }
 .table-container {
-  max-width: 100vw;
+  max-width: 1920px;
+  max-height: auto;
   display: flex;
   gap: 20px;
   margin-top: 20px; 
@@ -177,4 +215,59 @@ table.bordered td {
   font-size: 13px;
   color: rgb(255, 136, 0);
 }
+.input-container-1 {
+  position: relative;
+  width: 300px;
+  margin: 30px 0;
+}
+.inputSearch {
+   position: relative;
+  width: 300px;
+  margin-top: 10px;
+  width: 400px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+.input-container-1 input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-container-1 input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+.input-container-2 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 300px;
+  margin: 30px 0;
+}
+.inputCheckFalse{
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.inputCheckTrue{
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  border-color: #007BFF;
+  color: #007BFF ;
+  outline: none;
+}
+
 </style>
