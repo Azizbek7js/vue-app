@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container">
+  <div class="main-container p-4">
     <input type="text" class="inputSearch" v-model="search" placeholder="Search...">
     <div class="table-container">
       <table class="bordered">
@@ -22,7 +22,7 @@
         </div>
       </div>
     </div>
-   <div class="input-container-1">
+    <div class="input-container-1">
   <input
     type="text"
     v-model="formattedInputValue"
@@ -30,7 +30,7 @@
     placeholder="Enter number"
   />
 </div>
-<div class="input-container-2">
+    <div class="input-container-2">
   <input type="checkbox" v-model="inputCheck" />
   <input
     type="text"
@@ -38,6 +38,552 @@
     placeholder="Enter number"
   />
 </div>
+    <div class="table-container-2">
+      <table>
+        <thead>
+        <tr>
+          <th rowspan="3">№</th>
+          <th rowspan="3">Логотип</th>
+          <th rowspan="3">Название</th>
+          <th rowspan="3">СТИР</th>
+          <th rowspan="3">Бириктирилган клиентлар</th>
+          <th colspan="5">Контракт</th>
+          <th colspan="6">Транкзации</th>
+        </tr>
+        <tr>
+          <th colspan="2">Жами</th>
+          <th colspan="3">Актив</th>
+          <th colspan="2">Жами</th>
+          <th colspan="2">Кабул килинди</th>
+          <th rowspan="2">Фарки</th>
+          <th rowspan="2">%</th>
+        </tr>
+        <tr>
+          <th>Суммаси</th>
+          <th>Сони</th>
+          <th>Суммаси</th>
+          <th>Сони</th>
+          <th>Колдик суммаси</th>
+          <th>Суммаси</th>
+          <th>Сони</th>
+          <th>Суммаси</th>
+          <th>Сони</th>
+        </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="table-container-3">
+      <table class="position-sticky table-bordered">
+        <thead class="head-top">
+        <tr class="overall-row">
+          <th  rowspan="2" class="left">ФИО</th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">1</p>
+            <p class="mb-0 caption">пн</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">2</p>
+            <p class="mb-0 caption">вт</p>
+          </th>
+          <th  rowspan="3" >
+            <p class="mb-0 caption font-weight-bold">3</p>
+            <p class="mb-0 caption">ср</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold" >4</p>
+            <p class="mb-0 caption">чт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">5</p>
+            <p class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3" >
+            <p  class="mb-0 caption font-weight-bold">6</p>
+            <p class="mb-0 caption">сб</p>
+          </th>
+          <th rowspan="3" >
+            <p class="mb-0 caption font-weight-bold">7</p>
+            <p  class="mb-0 caption">вс</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">8</p>
+            <p  class="mb-0 caption">пн</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">9</p>
+            <p class="mb-0 caption">вт</p>
+          </th>
+          <th rowspan="3" >
+            <p class="mb-0 caption font-weight-bold">10</p>
+            <p data-v-679060de="" class="mb-0 caption">ср</p>
+          </th>
+          <th rowspan="3" class="">
+            <p data-v-679060de="" class="mb-0 caption font-weight-bold">11</p>
+            <p data-v-679060de="" class="mb-0 caption">чт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">12</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">13</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">14</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">15</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">16</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">17</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">18</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">19</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">20</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">21</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">22</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">23</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">24</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">25</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">26</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">27</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">28</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">29</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">30</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th rowspan="3">
+            <p class="mb-0 caption font-weight-bold">31</p>
+            <p data-v-679060de="" class="mb-0 caption">пт</p>
+          </th>
+          <th colspan="3" class="right">
+          Итого
+        </th>
+        </tr>
+        <tr>
+          <th colspan="1" class="right" style="right: 164px; z-index: 9;">Лимит</th>
+          <th colspan="1" class="right " style="right: 82px; z-index: 9;">Собрано</th>
+          <th colspan="1" class="right" style="right: 0; z-index: 9;">Разница</th></tr>
+        </thead>
+        <tbody>
+        <tr class="overall-row">
+          <td class="left">SALARYMETHOD</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td class="right" style="right:167px">00:00</td>
+          <td class="right" style="right:83px">00:00</td>
+          <td class="right" style="right:0">00:00</td>
+        </tr>
+        <tr class="overall-row">
+          <td class="left">SALARYMETHOD</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td class="right" style="right:167px">00:00</td>
+          <td class="right" style="right:83px">00:00</td>
+          <td class="right" style="right:0">00:00</td>
+        </tr>
+        <tr class="overall-row">
+          <td class="left">SALARYMETHOD</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td class="right" style="right:167px">00:00</td>
+          <td class="right" style="right:83px">00:00</td>
+          <td class="right" style="right:0">00:00</td>
+        </tr>
+        <tr class="overall-row">
+          <td class="left">SALARYMETHOD</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td class="right" style="right:167px">00:00</td>
+          <td class="right" style="right:83px">00:00</td>
+          <td class="right" style="right:0">00:00</td>
+        </tr>
+        <tr class="overall-row">
+          <td class="left">SALARYMETHOD</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td class="right" style="right:167px">00:00</td>
+          <td class="right" style="right:83px">00:00</td>
+          <td class="right" style="right:0">00:00</td>
+        </tr>
+        <tr class="overall-row">
+          <td class="left">SALARYMETHOD</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td class="right" style="right:167px">00:00</td>
+          <td class="right" style="right:83px">00:00</td>
+          <td class="right" style="right:0">00:00</td>
+        </tr>
+        <tr class="overall-row">
+          <td class="left">SALARYMETHOD</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td class="right" style="right:167px">00:00</td>
+          <td class="right" style="right:83px">00:00</td>
+          <td class="right" style="right:0">00:00</td>
+        </tr>
+        <tr class="overall-row">
+          <td class="left">SALARYMETHOD</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td class="right" style="right:167px">00:00</td>
+          <td class="right" style="right:83px">00:00</td>
+          <td class="right" style="right:0">00:00</td>
+        </tr>
+        <tr class="overall-row">
+          <td class="left">SALARYMETHOD</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td class="right" style="right:167px">00:00</td>
+          <td class="right" style="right:83px">00:00</td>
+          <td class="right" style="right:0">00:00</td>
+        </tr>
+        <tr class="overall-row">
+          <td class="left">SALARYMETHOD</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td>00:00</td>
+          <td class="right" style="right:167px">00:00</td>
+          <td class="right" style="right:83px">00:00</td>
+          <td class="right" style="right:0">00:00</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
     <div v-if="modalOpen" class="modal-container" @click.self="closeModal">
       <div class="modal-content">
         <table class="bordered" style="width: 100%;">
@@ -156,11 +702,89 @@ export default {
 }
 .table-container {
   max-width: 1920px;
-  max-height: auto;
+  height: auto;
   display: flex;
   gap: 20px;
   margin-top: 20px; 
   text-align: center;
+}
+.table-container-2 {
+  padding: 30px 0;
+  table{
+    width: 100%;
+    background-color: #f5f5f5;
+    border-collapse: collapse !important;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    thead {
+      position: sticky;
+      background-color: #f5f5f5 ;
+      top: 0;
+    }
+    tr {
+      position: relative;
+      th {
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #e0e0e0;
+        border-right: 1px solid #e0e0e0;
+        padding: 8px 16px;
+        font-weight: 500;
+        font-size: 14px;
+        height: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+.table-container-3 {
+  width: 1000px;
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 100px;
+
+  .left{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+  .head-top{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  .right{
+    position: sticky;
+    right: 0;
+    z-index: 9;
+  }
+  table{
+    border-radius: 4px;
+    tr {
+      th {
+        position: sticky;
+        background-color: #f5f5f5 !important;
+        border: 1px solid #ececec;
+        padding: 8px 16px;
+        text-align: center !important;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #000000;
+      }
+      td {
+        background-color: #ffffff !important;
+        border: 1px solid #ececec;
+        padding: 8px 16px;
+        text-align: center !important;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #000000;
+      }
+    }
+  }
 }
 
 table.bordered {
@@ -202,6 +826,7 @@ table.bordered td {
 }
 
 .modal-content {
+  z-index: 2;
   width: 80%;
   max-width: 600px;
   background-color: white;
@@ -224,7 +849,6 @@ table.bordered td {
    position: relative;
   width: 300px;
   margin-top: 10px;
-  width: 400px;
   padding: 10px;
   border: 2px solid #ccc;
   border-radius: 4px;
