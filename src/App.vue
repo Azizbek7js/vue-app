@@ -73,10 +73,10 @@
       </table>
     </div>
     <div class="table-container-3">
-      <table class="position-sticky table-bordered">
-        <thead class="head-top">
-        <tr class="overall-row">
-          <th  rowspan="2" class="left">ФИО</th>
+      <table>
+        <thead :class="{'head-top': !modalOpen }">
+        <tr>
+          <th  rowspan="2" :class="{'left': !modalOpen }">ФИО</th>
           <th rowspan="3">
             <p class="mb-0 caption font-weight-bold">1</p>
             <p class="mb-0 caption">пн</p>
@@ -201,18 +201,18 @@
             <p class="mb-0 caption font-weight-bold">31</p>
             <p data-v-679060de="" class="mb-0 caption">пт</p>
           </th>
-          <th colspan="3" class="right">
+          <th colspan="3" :class="{'right': !modalOpen }" >
           Итого
         </th>
         </tr>
         <tr>
-          <th colspan="1" class="right" style="right: 164px; z-index: 9;">Лимит</th>
-          <th colspan="1" class="right " style="right: 82px; z-index: 9;">Собрано</th>
-          <th colspan="1" class="right" style="right: 0; z-index: 9;">Разница</th></tr>
+          <th colspan="1" :class="{'right': !modalOpen }" style="right: 180px; top: 0; z-index: 9;">Лимит</th>
+          <th colspan="1" :class="{'right': !modalOpen }"  style="right: 89px;top: 0; z-index: 9;">Собрано</th>
+          <th colspan="1" :class="{'right': !modalOpen }"  style="right: 0;top: 0; z-index: 9;">Разница</th></tr>
         </thead>
         <tbody>
         <tr class="overall-row">
-          <td class="left">SALARYMETHOD</td>
+          <td :class="{'left': !modalOpen }">SALARYMETHOD</td>
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
@@ -244,12 +244,12 @@
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
-          <td class="right" style="right:167px">00:00</td>
-          <td class="right" style="right:83px">00:00</td>
-          <td class="right" style="right:0">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:180px;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:89px ;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right: 0;top: 0;">00:00</td>
         </tr>
         <tr class="overall-row">
-          <td class="left">SALARYMETHOD</td>
+          <td :class="{'left': !modalOpen }">SALARYMETHOD</td>
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
@@ -281,12 +281,12 @@
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
-          <td class="right" style="right:167px">00:00</td>
-          <td class="right" style="right:83px">00:00</td>
-          <td class="right" style="right:0">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:180px;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:89px ;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right: 0;top: 0;">00:00</td>
         </tr>
         <tr class="overall-row">
-          <td class="left">SALARYMETHOD</td>
+          <td :class="{'left': !modalOpen }">SALARYMETHOD</td>
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
@@ -318,12 +318,12 @@
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
-          <td class="right" style="right:167px">00:00</td>
-          <td class="right" style="right:83px">00:00</td>
-          <td class="right" style="right:0">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:180px;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:89px ;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right: 0;top: 0;">00:00</td>
         </tr>
         <tr class="overall-row">
-          <td class="left">SALARYMETHOD</td>
+          <td :class="{'left': !modalOpen }">SALARYMETHOD</td>
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
@@ -355,12 +355,12 @@
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
-          <td class="right" style="right:167px">00:00</td>
-          <td class="right" style="right:83px">00:00</td>
-          <td class="right" style="right:0">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:180px;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:89px ;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right: 0;top: 0;">00:00</td>
         </tr>
         <tr class="overall-row">
-          <td class="left">SALARYMETHOD</td>
+          <td :class="{'left': !modalOpen }">SALARYMETHOD</td>
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
@@ -392,12 +392,12 @@
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
-          <td class="right" style="right:167px">00:00</td>
-          <td class="right" style="right:83px">00:00</td>
-          <td class="right" style="right:0">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:180px;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:89px ;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right: 0;top: 0;">00:00</td>
         </tr>
         <tr class="overall-row">
-          <td class="left">SALARYMETHOD</td>
+          <td :class="{'left': !modalOpen }">SALARYMETHOD</td>
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
@@ -429,12 +429,12 @@
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
-          <td class="right" style="right:167px">00:00</td>
-          <td class="right" style="right:83px">00:00</td>
-          <td class="right" style="right:0">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:180px;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:89px ;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right: 0;top: 0;">00:00</td>
         </tr>
         <tr class="overall-row">
-          <td class="left">SALARYMETHOD</td>
+          <td :class="{'left': !modalOpen }">SALARYMETHOD</td>
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
@@ -466,12 +466,12 @@
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
-          <td class="right" style="right:167px">00:00</td>
-          <td class="right" style="right:83px">00:00</td>
-          <td class="right" style="right:0">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:180px;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:89px ;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right: 0;top: 0;">00:00</td>
         </tr>
         <tr class="overall-row">
-          <td class="left">SALARYMETHOD</td>
+          <td :class="{'left': !modalOpen }">SALARYMETHOD</td>
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
@@ -503,12 +503,12 @@
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
-          <td class="right" style="right:167px">00:00</td>
-          <td class="right" style="right:83px">00:00</td>
-          <td class="right" style="right:0">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:180px;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:89px ;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right: 0;top: 0;">00:00</td>
         </tr>
         <tr class="overall-row">
-          <td class="left">SALARYMETHOD</td>
+          <td :class="{'left': !modalOpen }">SALARYMETHOD</td>
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
@@ -540,12 +540,12 @@
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
-          <td class="right" style="right:167px">00:00</td>
-          <td class="right" style="right:83px">00:00</td>
-          <td class="right" style="right:0">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:180px;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:89px ;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right: 0;top: 0;">00:00</td>
         </tr>
         <tr class="overall-row">
-          <td class="left">SALARYMETHOD</td>
+          <td :class="{'left': !modalOpen }">SALARYMETHOD</td>
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
@@ -577,9 +577,9 @@
           <td>00:00</td>
           <td>00:00</td>
           <td>00:00</td>
-          <td class="right" style="right:167px">00:00</td>
-          <td class="right" style="right:83px">00:00</td>
-          <td class="right" style="right:0">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:180px;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right:89px ;top: 0;">00:00</td>
+          <td :class="{'right': !modalOpen }" style="right: 0;top: 0;">00:00</td>
         </tr>
         </tbody>
       </table>
@@ -741,10 +741,8 @@ export default {
   height: 300px;
   overflow-y: auto;
   margin-bottom: 100px;
-
   .left{
     position: sticky;
-    top: 0;
     left: 0;
     z-index: 9;
   }
@@ -760,21 +758,33 @@ export default {
     z-index: 9;
   }
   table{
+    border-collapse: separate !important;
+    border-spacing: 0;
     border-radius: 4px;
+    white-space: nowrap;
+    tbody {
+        tr {
+          td {
+            background-color: #ffffff !important;
+            border: 1px solid #ececec;
+            padding: 8px 16px;
+            text-align: center !important;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: #000000;
+          }
+
+          &:hover {
+            td {
+              background-color: aliceblue;
+            }
+          }
+        }
+      }
     tr {
       th {
-        position: sticky;
         background-color: #f5f5f5 !important;
-        border: 1px solid #ececec;
-        padding: 8px 16px;
-        text-align: center !important;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 20px;
-        color: #000000;
-      }
-      td {
-        background-color: #ffffff !important;
         border: 1px solid #ececec;
         padding: 8px 16px;
         text-align: center !important;
@@ -826,7 +836,7 @@ table.bordered td {
 }
 
 .modal-content {
-  z-index: 2;
+  z-index: 15;
   width: 80%;
   max-width: 600px;
   background-color: white;
