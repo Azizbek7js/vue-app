@@ -1,6 +1,11 @@
 <template>
   <div class="main-container p-4">
     <input type="text" class="inputSearch" v-model="search" placeholder="Search...">
+    <div class="pt-2">
+      <button class="btn btn-primary" @click="changeStatus('ALL')">ALL</button>
+      <button class="btn btn-success mx-2" @click="changeStatus('ACTIVE')">ACTIVE</button>
+      <button class="btn btn-danger" @click="changeStatus('INACTIVE')">INACTIVE</button>
+    </div>
     <div class="table-container">
       <table class="bordered">
         <thead>
@@ -38,7 +43,15 @@
     placeholder="Enter number"
   />
 </div>
-    <div class="table-container-2">
+    <div class="tabs-container">
+       <div class="w-25 h-100 d-flex align-items-center justify-content-center " :class="{'border-bottom': tab===0}" @click="tab = 0" style="cursor: pointer ; color: white">
+         table-1
+       </div>
+      <div class="w-25 h-100 d-flex align-items-center justify-content-center" :class="{'border-bottom': tab===1}" @click="tab = 1" style="cursor: pointer; color: white" >
+         table-2
+       </div>
+    </div>
+    <div v-if="tab===0" class="table-container-2">
       <table>
         <thead>
         <tr>
@@ -72,7 +85,7 @@
         </thead>
       </table>
     </div>
-    <div class="table-container-3">
+    <div v-else class="table-container-3">
       <table>
         <thead :class="{'head-top': !modalOpen }">
         <tr>
@@ -622,6 +635,8 @@ export default {
   },
   data() {
     return {
+      tab: 0,
+      status:'ALL',
       modalOpen: false,
       inputCheck: false,
       search: '',
@@ -630,13 +645,17 @@ export default {
         { name: 'Name', key: 'name', check: true, size: 20 },
         { name: 'Age', key: 'age', check: true, size: 10 },
         { name: 'Email', key: 'email', check: true, size: 30 },
-        { name: 'Country', key: 'country', check: true, size: 20 },
+        { name: 'Email', key: 'email', check: true, size: 30 },
+        { name: 'Status', key: 'status', check: true, size: 20 },
         { name: 'Occupation', key: 'occupation', check: true, size: 20 }
       ],
       tableData: [
-        { id: 1, name: 'John Doe', age: 30, email: 'john@example.com', country: 'USA', occupation: 'Engineer' },
-        { id: 2, name: 'Jane Smith', age: 25, email: 'jane@example.com', country: 'Canada', occupation: 'Doctor' },
-        { id: 3, name: 'Bob Johnson', age: 35, email: 'bob@example.com', country: 'UK', occupation: 'Teacher' }
+        { id: 1, name: 'John Doe', age: 30,status: 'ACTIVE', email: 'john@example.com', country: 'USA', occupation: 'Engineer' },
+        { id: 2, name: 'Jane Smith', age: 25,status: 'ACTIVE', email: 'jane@example.com', country: 'Canada', occupation: 'Doctor' },
+        { id: 3, name: 'Bob Johnson', age: 35,status: 'INACTIVE' , email: 'bob@example.com', country: 'UK', occupation: 'Teacher' },
+        { id: 3, name: 'Bob Johnson', age: 35,status: 'INACTIVE' , email: 'bob@example.com', country: 'UK', occupation: 'Teacher' },
+        { id: 2, name: 'Jane Smith', age: 25,status: 'ACTIVE', email: 'jane@example.com', country: 'Canada', occupation: 'Doctor' },
+        { id: 3, name: 'Bob Johnson', age: 35,status: 'INACTIVE' , email: 'bob@example.com', country: 'UK', occupation: 'Teacher' },
       ]
     }
   },
@@ -650,20 +669,28 @@ export default {
   },
   computed: {
     displayedColumns() {
-      return this.header.filter(item => item.check);
+      return this.header.filter(item => item.check );
     },
     filteredData() {
+      const status = this.status;
       const search = this.search.toLowerCase();
-      return this.tableData.filter(item => {
+      return this.tableData.slice().sort((a, b) => a.age - b.age).filter(item => {
+        if (status !== 'ALL' && item.status !== status) {
+          return false;
+        }
         return Object.values(item).some(value =>
-          String(value).toLowerCase().includes(search)
+            String(value).toLowerCase().includes(search)
         );
       });
-    }    
+    }
+
   },
   methods: {
     closeModal() {
       this.modalOpen = false;
+    },
+    changeStatus(status){
+      this.status = status
     },
     handleInput(e) {
       this.formattedInputValue = this.numberFormatThree(e.target.value);
@@ -687,6 +714,7 @@ export default {
     }
   },
   mounted() {
+    localStorage.setItem('header', JSON.stringify(this.header));
     this.header = JSON.parse(localStorage.getItem('header')) || this.header;
     document.addEventListener('keydown', this.handleKeydown);
   },
@@ -708,8 +736,17 @@ export default {
   margin-top: 20px; 
   text-align: center;
 }
+.tabs-container{
+  margin-left: 300px;
+  margin-bottom: 10px;
+  width: 500px;
+  height: 50px;
+  background-color: #007BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .table-container-2 {
-  padding: 30px 0;
   table{
     width: 100%;
     background-color: #f5f5f5;
