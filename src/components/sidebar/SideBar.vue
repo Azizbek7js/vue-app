@@ -24,6 +24,11 @@
           <i class="fas fa-4"></i> Panel
         </a>
       </li>
+      <li @click="$emit('update-route', 'carousel')" class="rounded" :class="{'bg-primary': route==='carousel'}">
+        <a>
+          <i class="fas fa-5"></i> Carousel
+        </a>
+      </li>
     </ul>
   </div>
 </template>

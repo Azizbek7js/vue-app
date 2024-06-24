@@ -7,7 +7,8 @@
           <InputComponent v-if="route==='input'" />
           <TabsComponent v-if="route === 'tabs'"/>
           <PanelComponent v-if="route==='panel'"/>
-        </div>
+          <CarouselComponent v-if="route==='carousel'"/>
+      </div>
     </div>
   </div>
 </template>
@@ -18,9 +19,11 @@ import TableComponent from "@/components/table/TableComponent.vue"
 import InputComponent from "@/components/input/InputComponent.vue";
 import TabsComponent from "@/components/tabs/TabsComponent.vue";
 import PanelComponent from "@/components/panel/PanelComponent.vue";
+import CarouselComponent from "@/components/carousel/CarouselComponent.vue";
 export default {
   name: 'App',
   components: {
+    CarouselComponent,
     PanelComponent,
     TabsComponent,
     InputComponent,
@@ -44,7 +47,6 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
 
 body {
-  overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
 }
